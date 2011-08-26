@@ -1,0 +1,5 @@
+echoserver
+*_tmp
+.libs
+*.[coa]
+*.swp

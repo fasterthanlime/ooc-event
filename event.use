@@ -1,0 +1,3 @@
+Name: libevent
+Version: 2.0.13-stable
+Libs: -levent
