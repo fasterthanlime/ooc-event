@@ -8,6 +8,7 @@ import net/ServerSocket, Event
     base := EventBase new()
     event := Event new()
     event set(s descriptor, Event READ | Event PERSIST, |fd, ev|
+	c := s accept()
 	"Accepted connection! Yeepee." println()
     )
     base set(event&)
