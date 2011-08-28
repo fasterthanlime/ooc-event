@@ -2,6 +2,7 @@ import net/ServerSocket, Event
 
 {
     s := ServerSocket new("0.0.0.0", 8080)
+    s listen()
     s setReuseAddr(true)
    
     base := EventBase new()
