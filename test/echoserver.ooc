@@ -9,6 +9,7 @@ import net/ServerSocket, Event
     event := Event new()
     event set(s descriptor, Event READ | Event PERSIST, |fd, ev|
 	c := s accept()
+	c out write("Hay there! You have reached nddrylliog. Please leave a message\n"). close()
 	"Accepted connection! Yeepee." println()
     )
     base set(event&)
