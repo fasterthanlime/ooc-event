@@ -30,6 +30,25 @@ Event: cover from struct event {
 
 }
 
+event_read_write_thunk: func (incoming: BufferEvent*
+
+BufferCallback: class {
+    read : func (ev: BufferEvent) {}
+    write: func (ev: BufferEvent) {}
+    error: func (ev: BufferEvent, what: Short) {}
+
+    
+}
+
+BufferEvent: cover from struct bufferevent* {
+
+    new: static (fd: FileDescriptor, cb: BufferCallback, what: Short)) -> BufferEvent {
+
+    }
+				    
+
+}
+
 event_set: extern func (Event*, FileDescriptor, Int, Pointer, Pointer)
 
 EventBase: cover from struct event_base* {
